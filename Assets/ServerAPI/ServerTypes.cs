@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Rendering;
 
 
 namespace CommonServerAPI 
@@ -11,13 +13,22 @@ namespace CommonServerAPI
 
     }
 
-    public class Request
+    public abstract class AbstractCall
     {
+        protected AbstractCall()
+        {
+            Type = GetType().FullName;
+        }
 
+        public string Type { get; }
     }
 
-    public class Response
+    public class Request: AbstractCall
     {
+        
+    }
 
+    public class Response: AbstractCall
+    {
     }
 }
