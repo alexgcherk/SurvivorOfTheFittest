@@ -11,12 +11,12 @@ namespace CommonServerAPI
 
     }
 
-    public abstract class Request
+    public class Request
     {
 
     }
 
-    public abstract class Response
+    public class Response
     {
 
     }
